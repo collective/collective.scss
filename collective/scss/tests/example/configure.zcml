@@ -1,0 +1,37 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collective.scss">
+
+  <browser:page
+    name="variables.scss"
+    for="*"
+    class="collective.scss.stylesheet.SCSSView"
+    template="variables.pt"
+    permission="zope2.View"
+    />
+  <browser:page
+    name="nesting.scss"
+    for="*"
+    class="collective.scss.stylesheet.SCSSView"
+    template="nesting.pt"
+    permission="zope2.View"
+    />
+  <browser:page
+    name="mixins.scss"
+    for="*"
+    class="collective.scss.stylesheet.SCSSView"
+    template="mixins.pt"
+    permission="zope2.View"
+    />
+  <browser:page
+    name="selector-inheritance.scss"
+    for="*"
+    class="collective.scss.stylesheet.SCSSView"
+    template="selector-inheritance.pt"
+    permission="zope2.View"
+    />
+</configure>
