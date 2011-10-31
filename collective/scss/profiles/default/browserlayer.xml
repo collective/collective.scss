@@ -3,7 +3,7 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <layer name="SCSSLayer"
-        interface="collective.scss.interfaces.scsslayerlayer.ISCSSLayer"
+        interface="collective.scss.interfaces.ISCSSLayer"
     />
 </layers>
 
