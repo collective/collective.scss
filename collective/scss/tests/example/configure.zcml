@@ -10,28 +10,28 @@
     name="variables.scss"
     for="*"
     class="collective.scss.stylesheet.SCSSView"
-    template="variables.pt"
+    template="variables.scss"
     permission="zope2.View"
     />
   <browser:page
     name="nesting.scss"
     for="*"
     class="collective.scss.stylesheet.SCSSView"
-    template="nesting.pt"
+    template="nesting.scss"
     permission="zope2.View"
     />
   <browser:page
     name="mixins.scss"
     for="*"
     class="collective.scss.stylesheet.SCSSView"
-    template="mixins.pt"
+    template="mixins.scss"
     permission="zope2.View"
     />
   <browser:page
     name="selector-inheritance.scss"
     for="*"
     class="collective.scss.stylesheet.SCSSView"
-    template="selector-inheritance.pt"
+    template="selector-inheritance.scss"
     permission="zope2.View"
     />
 </configure>

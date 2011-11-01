@@ -45,6 +45,11 @@ SELECTOR_INHERITANCE = """
     border-width: 3px;}
 """
 
+def are_same_styles(s1,s2):
+    clean1 = s1.replace('\n','').replace(' ','').replace('\t','')
+    clean2 = s2.replace('\n','').replace(' ','').replace('\t','')
+    return clean1 == clean2
+
 class TestStyleSheet(base.TestCase):
 
     def _callsheet(self, name):
@@ -52,16 +57,16 @@ class TestStyleSheet(base.TestCase):
 
     def test_variables(self):
         variables = self._callsheet('variables.scss')
-        self.failUnless(variables == VARIABLES, variables)
+        self.failUnless(are_same_styles(variables, VARIABLES))
 
     def test_nesting(self):
         nesting = self._callsheet('nesting.scss')
-        self.failUnless(nesting == NESTING, nesting)
+        self.failUnless(are_same_styles(nesting, NESTING))
 
     def test_mixins(self):
         mixins = self._callsheet('mixins.scss')
-        self.failUnless(mixins == MIXINS, mixins)
+        self.failUnless(are_same_styles(mixins, MIXINS))
 
     def test_selector_inheritance(self):
         selector_inheritance = self._callsheet('selector-inheritance.scss')
-        self.failUnless(selector_inheritance == SELECTOR_INHERITANCE, selector_inheritance)
+        self.failUnless(are_same_styles(selector_inheritance, SELECTOR_INHERITANCE))
